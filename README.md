@@ -8,9 +8,10 @@
   1. Linguagem C#
   2. .NET 7
   3. Desenvolvimento de API Rest com ASP.NET Core
-  4. Utilização de Clean Architecture (DDD), Command-Query Responsility Segregation (CQRS) para separar as consultas 
-     (Queries) das ações que alteram o estado do sistema (Commands) e Padrão Repository para encapsular o acesso a 
-     dados, desacoplando detalhes de implementação através de interfaces.
+  4. Utilização de Clean Architecture (DDD), Command-Query Responsility Segregation (CQRS) para
+     separar as consultas (Queries) das ações que alteram o estado do sistema (Commands) e Padrão
+     Repository para encapsular o acesso a dados, desacoplando detalhes de implementação através 
+     de interfaces.
   5. Validação de APIs com FluentValidation
   6. Persistência e acesso à dados com Entity Framework Core e SQL Server
   7. Testes Unitários com xUnit
@@ -28,7 +29,7 @@
   <h4>2. Clonando o Repositório</h4>
   <p>a. Crie a pasta que irá receber o clone do projeto.</p>
   <p>b. Abra um terminal no caminho da pasta e insira o comando abaixo.</p>
-  <pre><code>git clone https://github.com/Thiago-Gonzalez/DevEncurtaUrl.Server</code></pre>   
+  <pre><code>git clone git@github.com:Thiago-Gonzalez/DevEncurtaUrl.Server.git</code></pre>   
 
   <h4>3. Configurações para rodar o projeto:</h4>
   <p>a. Instalando o Entity Framework Core globalmente na sua máquina:<p>
@@ -74,8 +75,8 @@ os pacotes nuget e buildar a aplicação.</p>
   Password: ********
   </pre>
   <p>b. Se você optou por utilizar o SQL Server Management Studio com Windows Authentication:</p>
-  <pre>Selecione o tipo de autenticação com Windows Authentication e ao aplicar as migrations, o banco do DevEncurtaUrl estará 
-disponível para uso.</pre>
+  <pre>Selecione o tipo de autenticação com Windows Authentication e ao aplicar as migrations, o banco 
+do DevEncurtaUrl estará disponível para uso.</pre>
 
 <p align="center">© Thiago González</p>
 </div>
