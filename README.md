@@ -46,7 +46,7 @@ e selecione a pasta do projeto.</p>
 de aplicar as migrations. Para isso, no arquivo **appsetting.json** localizado dentro do projeto de API, altere a 
 connectionString conforme código abaixo.</blockquote>
   <pre><code>"ConnectionStrings": {
-   "DevEncurtaUrlCs": "Server=localhost;Database=DevEncurtaUrl;User Id=sa;Password=********"
+   "DevEncurtaUrlCs": "Server=localhost;Database=DevEncurtaUrl;User Id=sa;Password=********;trustServerCertificate=true"
 }</code></pre>
   <p>Com o projeto aberto no terminal na pasta DevEncurtaUrl.Infrastructre, inserir o comando abaixo para aplicar
 as migrations no banco.</p>
