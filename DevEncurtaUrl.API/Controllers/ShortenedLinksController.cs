@@ -6,6 +6,7 @@ using DevEncurtaUrl.Application.Queries.GetShortenedLinkByCodeQuery;
 using DevEncurtaUrl.Application.Queries.GetShortenedLinkByIdQuery;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace DevEncurtaUrl.API.Controllers
 {
@@ -24,6 +25,8 @@ namespace DevEncurtaUrl.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            Log.Information("Requisição de listagem de links encurtados realizada!");
+
             var query = new GetAllShortenedLinksQuery();
 
             var links = await _mediator.Send(query);
