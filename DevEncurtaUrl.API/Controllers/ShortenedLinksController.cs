@@ -44,8 +44,18 @@ namespace DevEncurtaUrl.API.Controllers
             return Ok(link);
         }
 
+        /// <summary>
+        /// Cadastrar um link encurtado
+        /// </summary>
+        /// <remarks>
+        /// { "title": "ultimo-artigo Blog", "destionationLink": "https://www.luisdev.com.br/2021/08/18/10-livros-que-todo-desenvolvedor-net-deve-ler/" }
+        /// </remarks>
+        /// <param name="command">Dados de link</param>
+        /// <returns>Objeto recém-criado</returns>
+        /// <response code="201">Sucesso!</response>
         // api/shortenedLinks
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Post(AddShortenedLinkCommand command) 
         {
             var link = await _mediator.Send(command);
