@@ -1,5 +1,9 @@
 using DevEncurtaUrl.Application.Commands.AddShortenedLinkCommand;
+using DevEncurtaUrl.Core.Repositories;
+using DevEncurtaUrl.Infrastructure.Persistence;
+using DevEncurtaUrl.Infrastructure.Persistence.Repositories;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +15,10 @@ builder.Services.AddCors(options => {
         }
     );
 });
+
+builder.Services.AddScoped<IShortenedLinkRepository, ShortenedLinkRepository>();
+
+builder.Services.AddDbContext<DevEncurtaUrlDbContext>(options => options.UseInMemoryDatabase("DevEncurtaUrlDb"));
 
 builder.Services.AddMediatR(typeof(AddShortenedLinkCommand));
 

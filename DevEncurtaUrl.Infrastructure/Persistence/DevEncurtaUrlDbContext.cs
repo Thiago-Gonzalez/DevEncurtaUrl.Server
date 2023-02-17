@@ -10,7 +10,7 @@ namespace DevEncurtaUrl.Infrastructure.Persistence
         {
         }
 
-        public DbSet<ShortenedCustomLink> Links { get; set; }
+        public DbSet<ShortenedCustomLink> ShortenedLinks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
