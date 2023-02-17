@@ -18,7 +18,9 @@ builder.Services.AddCors(options => {
 
 builder.Services.AddScoped<IShortenedLinkRepository, ShortenedLinkRepository>();
 
-builder.Services.AddDbContext<DevEncurtaUrlDbContext>(options => options.UseInMemoryDatabase("DevEncurtaUrlDb"));
+var connectionString = builder.Configuration.GetConnectionString("DevEncurtaUrlCs");
+
+builder.Services.AddDbContext<DevEncurtaUrlDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddMediatR(typeof(AddShortenedLinkCommand));
 
