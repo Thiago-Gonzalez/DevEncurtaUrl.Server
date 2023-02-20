@@ -1,11 +1,12 @@
-using DevEncurtaUrl.Application.Commands.AddShortenedLinkCommand;
-using DevEncurtaUrl.Application.Commands.DeleteShortenedLinkCommand;
-using DevEncurtaUrl.Application.Commands.UpdateShortenedLinkCommand;
-using DevEncurtaUrl.Application.Queries.GetAllShortenedLinksQuery;
-using DevEncurtaUrl.Application.Queries.GetShortenedLinkByCodeQuery;
-using DevEncurtaUrl.Application.Queries.GetShortenedLinkByIdQuery;
+using DevEncurtaUrl.Application.Commands.AddShortenedLink;
+using DevEncurtaUrl.Application.Commands.DeleteShortenedLink;
+using DevEncurtaUrl.Application.Commands.UpdateShortenedLink;
+using DevEncurtaUrl.Application.Queries.GetAllShortenedLinks;
+using DevEncurtaUrl.Application.Queries.GetShortenedLinkByCode;
+using DevEncurtaUrl.Application.Queries.GetShortenedLinkById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace DevEncurtaUrl.API.Controllers
 {
@@ -24,6 +25,8 @@ namespace DevEncurtaUrl.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
+            Log.Information("Requisição de listagem de links encurtados realizada!");
+
             var query = new GetAllShortenedLinksQuery();
 
             var links = await _mediator.Send(query);
@@ -44,8 +47,18 @@ namespace DevEncurtaUrl.API.Controllers
             return Ok(link);
         }
 
+        /// <summary>
+        /// Cadastrar um link encurtado
+        /// </summary>
+        /// <remarks>
+        /// { "title": "ultimo-artigo Blog", "destionationLink": "https://www.luisdev.com.br/2021/08/18/10-livros-que-todo-desenvolvedor-net-deve-ler/" }
+        /// </remarks>
+        /// <param name="command">Dados de link</param>
+        /// <returns>Objeto recém-criado</returns>
+        /// <response code="201">Sucesso!</response>
         // api/shortenedLinks
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Post(AddShortenedLinkCommand command) 
         {
             var link = await _mediator.Send(command);
