@@ -14,6 +14,7 @@
      de interfaces.
   5. Persistência e acesso à dados com Entity Framework Core e SQL Server
   6. Testes Unitários com xUnit
+  7. Logs com Serilog
   </pre>
   
   <h3>Instruções para obter o repositório e rodar o projeto:</h3>
