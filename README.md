@@ -1,20 +1,19 @@
 <div>
   <h1>DevEncurtaUrl</h1>
-  <p>É um projeto de uma Web API de encurtador de url desenvolvido com C#, .NET 7 e ASP.NET Core durante a Jornada .NET 8, da Luis Dev Treinamentos em Programação.</p>
-  <p>Como desafios para o projeto, decidi implementa-lo utilizando a architetura limpa (DDD) e implementar alguns testes unitários.</p>
+  <p>É um projeto de uma Web API de encurtador de url desenvolvido com C#, .NET 7, EntityFramework Core com SQLServer e ASP.NET Core durante a Jornada .NET 8, da Luis Dev Treinamentos em Programação.</p>
+  <p>Como desafios para o projeto, decidi implementa-lo utilizando a architetura limpa, utilização dos padrões CQRS (Command-Query Responsibility Segregation) e Repository e também foram desenvolvidos testes unitários com xUnit, para fins de prática e aprendizado.</p>
 
-  <h3>Para desenvolvimento do projeto foram utilizadas as tecnologias:</h3>
+  <h3>Tecnologias utilizadas:</h3>
   <pre>
   1. Linguagem C#
   2. .NET 7
-  3. Desenvolvimento de API Rest com ASP.NET Core
-  4. Utilização de Clean Architecture (DDD), Command-Query Responsility Segregation (CQRS) para
+  3. Desenvolvimento de Web APIs Rest com ASP.NET Core
+  4. Utilização de Clean Architecture, Command-Query Responsility Segregation (CQRS) para
      separar as consultas (Queries) das ações que alteram o estado do sistema (Commands) e Padrão
      Repository para encapsular o acesso a dados, desacoplando detalhes de implementação através 
      de interfaces.
-  5. Validação de APIs com FluentValidation
-  6. Persistência e acesso à dados com Entity Framework Core e SQL Server
-  7. Testes Unitários com xUnit
+  5. Persistência e acesso à dados com Entity Framework Core e SQL Server
+  6. Testes Unitários com xUnit
   </pre>
   
   <h3>Instruções para obter o repositório e rodar o projeto:</h3>
@@ -78,5 +77,35 @@ os pacotes nuget e buildar a aplicação.</p>
   <pre>Selecione o tipo de autenticação com Windows Authentication e ao aplicar as migrations, o banco 
 do DevEncurtaUrl estará disponível para uso.</pre>
 
+  <h3>Consumindo a API:</h3>
+  <h4>Url base:</h4>
+  <p>localhost:3000</p>
+  <h4>Listar links encurtados:</h4>
+  <p>Endpoint: localhost:3000/api/shortenedLinks</p>
+  <h4>Cadastrar um link encurtado:</h4>
+  <p>Enpoint: localhost:3000/api/shortenedLinks</p>
+  <p>Request Body: { "title": "string", "destinationLink": "string" }</p>
+  <p>Exemplo: { "title": "linkedin-thiagogonzalez Social", "destionationLink": "https://www.linkedin.com/in/thiago-gonz%C3%A1lez/" }</p>
+  <p>Link encurtado: localhost:3000/linkedin-thiagogonzalez</p>
+  <h4>Buscar link encurtado por Id:</h4>
+  <p>Endpoint: localhost:3000/api/shortenedLinks/id</p>
+  <h4>Atualizar link encurtado:</h4>
+  <p>Endpoint: localhost:3000/api/shortenedLinks/id</p>
+  <p>Request Body: { "title": "string", "destinationLink": "string" }</p>
+  <h4>Deletar link encurtado:</h4>
+  <p>Endpoint: localhost:3000/api/shortenedLinks/id</p>
+  <h4>Redirecionar link encurtado:</h4>
+  <p>Endpoint: localhost:3000/code</p>
+  <p>Nota:</p>
+  <pre>Code: Consiste no primeiro elemento da lista formada pelos elementos da string Title com separador 
+sendo um espaço em branco (Title.Split(" ")[0]).</pre>
+
+  <h3>Pré-visualização:</h3>
+  <img src="https://cdn.discordapp.com/attachments/1073613352091271279/1077030207581597726/deepin-screen-recorder_Select_area_20230217172144.gif" />
+  <img src="https://cdn.discordapp.com/attachments/1073613352091271279/1077030472661610506/Captura_de_tela_de_2023-02-17_16-44-15.png" />
+  
+  <h4>Nota:</h4>
+  <pre>Front-end da aplicação exibido no preview foi desenvolvido pela equipe LuisDev para consumo
+durante a Jornada .NET 8 e seu repositório está disponível no github do @luisdeol (<a href="https://github.com/luisdeol/dev-encurta-url-front">link</a>).</pre>
 <p align="center">© Thiago González</p>
 </div>
