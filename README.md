@@ -1,7 +1,7 @@
 <div>
   <h1>DevEncurtaUrl</h1>
   <p>É um projeto de uma Web API de encurtador de url desenvolvido com C#, .NET 7, EntityFramework Core com SQLServer e ASP.NET Core durante a Jornada .NET 8, da Luis Dev Treinamentos em Programação.</p>
-  <p>Como desafios para o projeto, decidi implementa-lo utilizando a architetura limpa, utilização dos padrões CQRS (Command-Query Responsibility Segregation) e Repository e também foram desenvolvidos testes unitários com xUnit, para fins de prática e aprendizado.</p>
+  <p>Como desafios para o projeto, decidi implementa-lo utilizando a arquitetura limpa, utilização dos padrões CQRS (Command-Query Responsibility Segregation) e Repository e também foram desenvolvidos testes unitários com xUnit, para fins de prática e aprendizado.</p>
 
   <h3>Tecnologias utilizadas:</h3>
   <pre>
