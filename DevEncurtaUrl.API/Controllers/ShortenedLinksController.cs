@@ -1,9 +1,9 @@
-using DevEncurtaUrl.Application.Commands.AddShortenedLinkCommand;
-using DevEncurtaUrl.Application.Commands.DeleteShortenedLinkCommand;
-using DevEncurtaUrl.Application.Commands.UpdateShortenedLinkCommand;
-using DevEncurtaUrl.Application.Queries.GetAllShortenedLinksQuery;
-using DevEncurtaUrl.Application.Queries.GetShortenedLinkByCodeQuery;
-using DevEncurtaUrl.Application.Queries.GetShortenedLinkByIdQuery;
+using DevEncurtaUrl.Application.Commands.AddShortenedLink;
+using DevEncurtaUrl.Application.Commands.DeleteShortenedLink;
+using DevEncurtaUrl.Application.Commands.UpdateShortenedLink;
+using DevEncurtaUrl.Application.Queries.GetAllShortenedLinks;
+using DevEncurtaUrl.Application.Queries.GetShortenedLinkByCode;
+using DevEncurtaUrl.Application.Queries.GetShortenedLinkById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;

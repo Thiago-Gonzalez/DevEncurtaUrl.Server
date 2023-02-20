@@ -1,4 +1,4 @@
-using DevEncurtaUrl.Application.Commands.AddShortenedLinkCommand;
+using DevEncurtaUrl.Application.Commands.AddShortenedLink;
 using DevEncurtaUrl.Core.Repositories;
 using DevEncurtaUrl.Infrastructure.Persistence;
 using DevEncurtaUrl.Infrastructure.Persistence.Repositories;

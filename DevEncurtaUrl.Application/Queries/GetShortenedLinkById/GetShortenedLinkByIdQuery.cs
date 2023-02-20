@@ -1,7 +1,7 @@
 using DevEncurtaUrl.Application.ViewModels;
 using MediatR;
 
-namespace DevEncurtaUrl.Application.Queries.GetShortenedLinkByIdQuery
+namespace DevEncurtaUrl.Application.Queries.GetShortenedLinkById
 {
     public class GetShortenedLinkByIdQuery : IRequest<ShortenedLinkViewModel>
     {

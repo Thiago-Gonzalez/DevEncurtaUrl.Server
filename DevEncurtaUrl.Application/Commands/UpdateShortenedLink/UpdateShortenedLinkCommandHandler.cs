@@ -2,7 +2,7 @@ using DevEncurtaUrl.Core.Entities;
 using DevEncurtaUrl.Core.Repositories;
 using MediatR;
 
-namespace DevEncurtaUrl.Application.Commands.UpdateShortenedLinkCommand
+namespace DevEncurtaUrl.Application.Commands.UpdateShortenedLink
 {
     public class UpdateShortenedLinkCommandHandler : IRequestHandler<UpdateShortenedLinkCommand, ShortenedCustomLink>
     {

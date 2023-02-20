@@ -2,7 +2,7 @@ using DevEncurtaUrl.Application.ViewModels;
 using DevEncurtaUrl.Core.Repositories;
 using MediatR;
 
-namespace DevEncurtaUrl.Application.Queries.GetAllShortenedLinksQuery
+namespace DevEncurtaUrl.Application.Queries.GetAllShortenedLinks
 {
     public class GetAllShortenedLinksQueryHandler : IRequestHandler<GetAllShortenedLinksQuery, List<ShortenedLinkViewModel>>
     {

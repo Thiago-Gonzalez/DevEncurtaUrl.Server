@@ -1,7 +1,7 @@
 using DevEncurtaUrl.Core.Entities;
 using MediatR;
 
-namespace DevEncurtaUrl.Application.Queries.GetShortenedLinkByCodeQuery
+namespace DevEncurtaUrl.Application.Queries.GetShortenedLinkByCode
 {
     public class GetShortenedLinkByCodeQuery : IRequest<ShortenedCustomLink>
     {

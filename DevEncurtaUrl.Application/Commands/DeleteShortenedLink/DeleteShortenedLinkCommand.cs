@@ -1,7 +1,7 @@
 using DevEncurtaUrl.Core.Entities;
 using MediatR;
 
-namespace DevEncurtaUrl.Application.Commands.DeleteShortenedLinkCommand
+namespace DevEncurtaUrl.Application.Commands.DeleteShortenedLink
 {
     public class DeleteShortenedLinkCommand : IRequest<ShortenedCustomLink>
     {
